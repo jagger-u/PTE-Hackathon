@@ -1,0 +1,57 @@
+
+
+Where:
+ - University of Pécs, Faculty of Business and Economics (Pécs, Rákóczi str. 80.)
+ - Fintelligence room (B323)
+
+
+
+
+
+
+Home doctor
+	1. Records
+		1.1 Medicine prescribed
+		1.2 Time, instructions
+		1.3 Basic knowledge, videos, description
+		1.4 Appointments, doctor availability (schedules saved)
+		1.5 Foo eaten, nutrition, Exercise data, sleeping
+		1.6 Health points, Group points
+*Noise Pollution, Air pollution
+	1. Sensors
+	2. Data will be used
+	3. Decide where to have a walk, where to move if you are have young children, if you are old
+
+
+
+
+What makes you guys different?
+How do you make money?
+How will you use the money?
+
+
+
+Repair shop
+Leasing, share economy
+Circular economy
+Plastic bank:
+	1. Return plastic bottles, products etc. and earn POINTS.
+	2. Those points increase exponentially. After 6 months of consistent recycling, the certain product
+		will be discounted 5%. After 1 year, 10%, 1.5 year 15% and up to 30%.
+		Social plastic. If as a group, they do consistent 5 months of recycling, the discount is 10%.
+		Lottery?
+Modern milkman
+
+
+
+Principles:
+1. Simple, minimalistic
+2. Clear
+3.
+Pages:
+1. Home
+	1.1 Carousel
+2. About
+3. Contact
+4. Projects
+5. Blog

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="static/images/favicon.png"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+  <link rel="stylesheet" href="static/css/style.css">
+  <title>Voyanteer: Map</title>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="sidebar">
+		<div class="nav-brand">
+			<div class="brand-logo">
+				<img class="img-fluid" src="static/images/thelogo.png">
+			</div>
+			<h1><a href="index.html">Voyanteer</a></h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/topic.html"><i class="fas fa-columns"></i>Get started</a></li>
+				<li><a href="/map.html"><i class="fas fa-map-marked-alt"></i>Map</a></li>
+				<!-- <li><a href="/statistics.html"><i class="fas fa-columns"></i>Application</a></li> -->
+			</ul>
+		</nav>
+	</div>
+	<div class="main_content">
+		<div class="container">
+			<div class="row" style="color: #000; text-align: left;">
+				<div class="col-7">
+					<div id="mapid" style="width: 100%; height: 88vh;"></div>
+				</div>
+				<div class="col-5">
+					<h2>Sign up</h2>
+					<p style="font-size: 20px;">Become a voyanteer and join a community now!</p>
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Name</label>
+							<input class="form-control" type="text" placeholder="We need your name">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							<label for="exampleInputEmail1">Phone</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter phone">
+							<small id="emailHelp" class="form-text text-muted">We'll use this for contacting.</small>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Check me out</label>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script src="load_figs.js"></script>
+<script src="static/javascript/setup.js"></script>
+<script>
+	city_budapest = [47.499227735163,19.049263000488278];
+	mymap = setup(city_budapest,14);
+	jsonCircles = 'static/data/budapest_coordinates.json';
+	jsonCustom = 'static/data/budapest_custom.json';
+	
+
+	// Circles - Red
+	jsonColor = 'red';
+	jsonFill = '#f03';
+	jsonOpacity = 0.4;
+	jsonRadius = 300;
+	loadCircles(jsonCircles, jsonColor, jsonFill, jsonOpacity, jsonRadius);
+	// Circles - Markers
+	loadMarker(jsonCircles);
+
+
+	// Custom Markers
+	loadPolygon('static/data/budapest_polygon.json')
+	loadCustom(jsonCustom);	
+	loadHospital('static/data/budapest_hospital.json');
+
+
+
+
+
+	var fixing = L.icon({
+    iconUrl: 'static/images/toolbox.svg',
+    iconSize:     [50, 50], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+	L.marker([47.501663142150775, 19.06076431274414], {icon: fixing}).addTo(mymap)
+	.bindPopup('<img width="200px"; src="static/images/repairtable.jpg">');
+	var fixing = L.icon({
+    iconUrl: 'static/images/wheelchair.svg',
+    iconSize:     [50, 50], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	});
+	L.marker([47.502663142150775, 19.03676431274414], {icon: fixing}).addTo(mymap)
+	.bindPopup("Wheel chair support!");
+
+
+</script>
+</html>

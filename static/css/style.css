@@ -1,0 +1,170 @@
+body {
+  background: rgb(239, 239, 239);
+  /* background: #0A578E; */
+  color: #fff;
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+
+.brand-logo {
+  font-size: 100px;
+}
+.brand {
+  margin-top: calc(32% - 300px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.brand h1 {
+  width: 100%;
+}
+.brand p {
+  width: 100%;
+}
+
+
+/********************************************************
+* 1. Navigation, base layout - START
+*
+************/
+.nav-brand {
+  opacity: 0.8;
+}
+.nav-brand:hover {
+  opacity: 1;
+}
+.nav-brand a {
+  color: #fff;
+}
+.nav-brand a:hover {
+  text-decoration: none;
+}
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background: rgb(49, 150, 175);
+  position: fixed;
+  left: 0;
+}
+.sidebar .brand-logo {
+  font-size: 70px;
+  margin: 0 20px;
+}
+.sidebar h1 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 0;
+}
+.sidebar ul li{
+  padding: 15px;
+  padding-left: 30px;
+}    
+.sidebar ul li a{
+  color: #fff;
+  display: block;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.sidebar ul li a .fas{
+  width: 25px;
+}
+.sidebar ul li:hover a{
+  color: #fff;
+  opacity: 1;
+  text-decoration: none;
+}
+.main_content {
+  width: 100%;
+  margin-left: 200px;
+  padding-top: 40px;
+}
+/* .main_content .header{
+  padding: 20px 20px 20px 40px;
+  font-size: 40px;
+  background: #0A578E;
+  color: #000;
+  text-align: left;
+} */
+/********************************************************
+* 1. Navigation, base layout - END
+*
+************/
+
+
+
+
+
+
+
+
+/********************************************************
+* 1. Topic - START
+*
+************/
+.all-topics {
+  /* margin-top: calc(40% - 300px); */
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.topic .card {
+  width: calc(25% - 20px);
+  margin: 0 10px;
+  margin-bottom: 20px;
+  border: none;
+}
+.topic .card img {
+  height: 180px;
+  width: auto;
+}
+.topic .card a {
+  background-color: #1E94A5;
+  border: none;
+}
+.topic .card a:hover {
+  background-color: #1B784F;
+}
+/********************************************************
+* 1. Topic - END
+*
+************/
+
+.return {
+  margin-top: 50px;
+  text-align: right;
+}
+
+/********************************************************
+* 2. Detail - START
+*
+************/
+/* .reading {
+  margin-top: 50px;
+} */
+.reading-img {
+  width: 400px;
+}
+.reading-img img {
+  border-radius: 0.25rem;
+}
+.reading-text {
+  /* background: #fff; */
+  color: #000;
+  text-align: left;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+}
+/********************************************************
+* 2. Detail - END
+*
+************/

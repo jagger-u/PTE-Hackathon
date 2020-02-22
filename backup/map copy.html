@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet practice</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+<body>
+<div id="mapid" style="width: 100%; height: 95vh;"></div>
+<!-- <div id="mapid" style="width: 500px; height: 500px;"></div> -->
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="setup.js"></script>
+
+
+
+<script>		
+
+	var crowIcon = L.icon({
+		iconUrl: 'crow2.png',
+		// iconSize: [64,74],
+		iconAnchor: [32,74],
+		popupAnchor: [0,-50]
+	});
+
+	var crowMarker = L.marker([46.077133321255014, 18.205266933441162], {
+		icon: crowIcon,
+	}).addTo(mymap);
+	var crowMarker = L.marker([46.076123321255014, 18.215266933441162]).addTo(mymap);
+	var crowMarker = L.marker([46.078113321255014, 18.225266933441162]).addTo(mymap);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
